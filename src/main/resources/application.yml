@@ -1,6 +1,9 @@
 spring:
   application:
     name: java-spring-boot-arquitetura-hexagonal
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/java_spring_boot_arquitetura_hexagonal
 
 config:
   client:
