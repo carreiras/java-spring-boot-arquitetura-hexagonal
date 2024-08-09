@@ -23,6 +23,10 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    set("springCloudVersion", "2021.0.4")
+}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("org.springframework.boot:spring-boot-starter-validation")
@@ -33,6 +37,16 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    implementation("org.mapstruct:mapstruct-processor:1.5.2.Final")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
+
 }
 
 tasks.withType<Test> {
