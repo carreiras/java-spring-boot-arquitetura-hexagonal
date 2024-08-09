@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: java-spring-boot-arquitetura-hexagonal
+
+config:
+  client:
+    address:
+      url: http://localhost:8082/address
+
