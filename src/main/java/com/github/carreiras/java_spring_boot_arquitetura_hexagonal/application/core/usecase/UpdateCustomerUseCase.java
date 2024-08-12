@@ -2,10 +2,11 @@ package com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.
 
 import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.core.domain.Customer;
 import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.ports.in.FindCustomerByIdInputPort;
+import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.ports.in.UpdateCustomerInputPort;
 import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.application.ports.out.UpdateCustomerOutputPort;
 
-public class UpdateCustomerUseCase {
+public class UpdateCustomerUseCase implements UpdateCustomerInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
     private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
@@ -19,6 +20,7 @@ public class UpdateCustomerUseCase {
         this.updateCustomerOutputPort = updateCustomerOutputPort;
     }
 
+    @Override
     public void update(Customer customer, String zipCode) {
         findCustomerByIdInputPort.find(customer.getId());
         var address = findAddressByZipCodeOutputPort.find(zipCode);
