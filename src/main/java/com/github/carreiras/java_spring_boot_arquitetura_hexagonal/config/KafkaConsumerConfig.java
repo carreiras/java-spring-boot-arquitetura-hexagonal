@@ -1,6 +1,7 @@
 package com.github.carreiras.java_spring_boot_arquitetura_hexagonal.config;
 
 
+
 import com.github.carreiras.java_spring_boot_arquitetura_hexagonal.adapters.in.consumer.message.CustomerMessage;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -40,11 +41,11 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, CustomerMessage>
-    kafkaListenerContainerFactory() {
+    public ConcurrentKafkaListenerContainerFactory<String, CustomerMessage> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, CustomerMessage> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;
     }
+
 }

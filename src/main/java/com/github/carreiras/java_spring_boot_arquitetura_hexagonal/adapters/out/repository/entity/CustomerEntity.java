@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collection = "customer")
+@Document(collection = "customers")
 public class CustomerEntity {
 
     @Id
@@ -13,5 +13,5 @@ public class CustomerEntity {
     private String name;
     private AddressEntity address;
     private String cpf;
-    private Boolean isvalidCpf;
+    private Boolean isValidCpf;
 }
