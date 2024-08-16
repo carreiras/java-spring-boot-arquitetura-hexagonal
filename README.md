@@ -68,10 +68,6 @@ Para mais informações, consulte a documentação oficial dos seguintes recurso
 - [Kafka](https://kafka.apache.org/documentation/)
 - [MongoDB](https://docs.mongodb.com/)
 
-## Contribuição
-
-Se você deseja contribuir para este projeto, por favor, siga as diretrizes de contribuição fornecidas.
-
 ## Licença
 
 Este projeto está licenciado sob a licença MIT.
