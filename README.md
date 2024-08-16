@@ -12,7 +12,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Java](https://docs.oracle.com/en/java/): Linguagem de programação utilizada para desenvolver a lógica de negócios do projeto.
 - [Spring Boot](https://spring.io/projects/spring-boot): Framework utilizado para facilitar o desenvolvimento de aplicações Java.
-- [Kotlin](https://kotlinlang.org/): Linguagem de programação utilizada em partes do projeto para aproveitar suas vantagens em relação ao Java.
 - [Gradle](https://gradle.org/): Ferramenta de automação de compilação utilizada para gerenciar dependências e construir o projeto.
 - [Kafka](https://kafka.apache.org/documentation/): Sistema de mensageria utilizado para comunicação assíncrona entre diferentes partes do projeto.
 - [MongoDB](https://docs.mongodb.com/): Banco de dados NoSQL utilizado para persistência de dados.
