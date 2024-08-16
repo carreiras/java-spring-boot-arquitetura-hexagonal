@@ -63,25 +63,24 @@ Aqui estão alguns exemplos de como configurar o WireMock para responder a requi
 ```
    
  ```json
-    {
-    "request": {
-        "method": "GET",
-        "url": "/addresses/38401000"
+{
+  "request": {
+    "method": "GET",
+    "url": "/addresses/38401000"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
     },
-    "response": {
-        "status": 200,
-        "headers": {
-        "Content-Type": "application/json"
-        },
-        "jsonBody": {
-        "street": "Rua Circular",
-        "city": "Uberlândia",
-        "state": "Minas Gerais"
-        }
+    "jsonBody": {
+      "street": "Rua Circular",
+      "city": "Uberlândia",
+      "state": "Minas Gerais"
     }
-    }
+  }
+}
 ```
-
 
 ## Utilizando Postman para Testar a API
 
@@ -91,145 +90,145 @@ Aqui está a collection do Postman que pode ser utilizado para testar este proje
 
 ```json
 {
-	"info": {
-		"_postman_id": "8e92fdb3-7c4e-45fc-a60e-5803ccff362c",
-		"name": "java-spring-boot-arquitetura-hexagonal",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "13175288"
-	},
-	"item": [
-		{
-			"name": "Wiremock",
-			"item": [
-				{
-					"name": "/addresses/38400000",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8082/addresses/38400000",
-							"host": [
-								"localhost"
-							],
-							"port": "8082",
-							"path": [
-								"addresses",
-								"38400000"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/addresses/38400001",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8082/addresses/38400001",
-							"host": [
-								"localhost"
-							],
-							"port": "8082",
-							"path": [
-								"addresses",
-								"38400001"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Customers",
-			"item": [
-				{
-					"name": "/api/v1/customers",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Bararandir\",\r\n    \"zipCode\": \"38400000\",\r\n    \"cpf\": \"11111111111\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/customers",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"customers"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/api/v1/customers/{id}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/customers/66bfacc3e35a313c9a1d0b94",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"customers",
-								"66bfacc3e35a313c9a1d0b94"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/api/v1/customers/{id}",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Belbeyguk\",\r\n    \"zipCode\": \"38400001\",\r\n    \"cpf\": \"11111111111\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/customers/66bfacc3e35a313c9a1d0b94",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"customers",
-								"66bfacc3e35a313c9a1d0b94"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "8e92fdb3-7c4e-45fc-a60e-5803ccff362c",
+    "name": "java-spring-boot-arquitetura-hexagonal",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13175288"
+  },
+  "item": [
+    {
+      "name": "Wiremock",
+      "item": [
+        {
+          "name": "/addresses/38400000",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8082/addresses/38400000",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "addresses",
+                "38400000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/addresses/38400001",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8082/addresses/38400001",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "addresses",
+                "38400001"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "/api/v1/customers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Bararandir\",\r\n    \"zipCode\": \"38400000\",\r\n    \"cpf\": \"11111111111\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/customers/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/66bfacc3e35a313c9a1d0b94",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "66bfacc3e35a313c9a1d0b94"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/customers/{id}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Belbeyguk\",\r\n    \"zipCode\": \"38400001\",\r\n    \"cpf\": \"11111111111\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/customers/66bfacc3e35a313c9a1d0b94",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "66bfacc3e35a313c9a1d0b94"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
 ```
 
