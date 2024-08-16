@@ -36,6 +36,51 @@ Para mais informações sobre cada tecnologia, consulte a documentação oficial
 
 Após a instalação, você pode iniciar a aplicação executando o comando `gradle bootRun`.
 
+## Utilizando WireMock para Simulação de Serviços
+
+Este projeto utiliza o WireMock para simular respostas de serviços externos durante o desenvolvimento e testes. O WireMock permite que você configure respostas estáticas para determinadas requisições HTTP.
+
+Aqui estão alguns exemplos de como configurar o WireMock para responder a requisições GET para dois CEPs diferentes:
+
+```json
+{
+  "request": {
+    "method": "GET",
+    "url": "/addresses/38400000"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "street": "Rua Hexagonal",
+      "city": "Uberlândia",
+      "state": "Minas Gerais"
+    }
+  }
+}
+```
+   
+ ```json
+    {
+    "request": {
+        "method": "GET",
+        "url": "/addresses/38401000"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+        "Content-Type": "application/json"
+        },
+        "jsonBody": {
+        "street": "Rua Circular",
+        "city": "Uberlândia",
+        "state": "Minas Gerais"
+        }
+    }
+    }
+```
 
 ## Produzindo Mensagens para o Kafka
 
