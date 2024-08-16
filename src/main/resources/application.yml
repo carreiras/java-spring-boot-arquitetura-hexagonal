@@ -7,8 +7,8 @@ spring:
       port: 27017
       authentication-database: admin
       username: root
-      password: s3nhaCompl3xa
-      database: java_spring_boot_arquitetura_hexagonal
+      password: example
+      database: hexagonal
 
 config:
   client:
